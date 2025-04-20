@@ -1,0 +1,11 @@
+# Ignore Visual Studio junk files
+.vs/
+*.user
+*.suo
+*.cache
+*.log
+*.dbmdl
+*.vscode/
+bin/
+obj/
+TestResults/

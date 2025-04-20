@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Games>
+	<Game>
+		<Date>2024-04-01</Date>
+		<League>Tempe Rec</League>
+		<Team1>Buckets</Team1>
+		<Team2>Skywalkers</Team2>
+		<Score1>55</Score1>
+		<Score2>60</Score2>
+		<BoxScore>
+			<Player name="Jason" team="Buckets" pts="15" reb="6" ast="2" />
+			<Player name="Troy" team="Skywalkers" pts="18" reb="4" ast="5" />
+		</BoxScore>
+	</Game>
+	<Game>
+		<Date>2024-04-05</Date>
+		<League>Tempe Rec</League>
+		<Team1>ClutchCrew</Team1>
+		<Team2>Buckets</Team2>
+		<Score1>50</Score1>
+		<Score2>65</Score2>
+		<BoxScore>
+			<Player name="Jason" team="Buckets" pts="20" reb="7" ast="4" />
+			<Player name="Troy" team="ClutchCrew" pts="12" reb="5" ast="3" />
+		</BoxScore>
+	</Game>
+</Games>
