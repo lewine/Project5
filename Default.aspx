@@ -67,8 +67,36 @@
 
     <asp:Label ID="lblLastVisit" runat="server" />
 
-
     <hr />
+    <h2>Team Apps</h2>
+     <asp:Label runat="server" Text="Enter Team Name:" />
+     <asp:TextBox ID="txtTeam" runat="server" />
+     <h3>TryIt: Get Team Record</h3>
+     <asp:Button ID="btnRecord" runat="server" Text="Get Team Record" OnClick="btnRecord_Click" />
+     <asp:Label ID="lblRecord" runat="server" ForeColor="Blue" Font-Bold="true" />
+     <h3>TryIt: Get Team Average Points</h3>
+     <asp:Button ID="Button1" runat="server" Text="Get Average Points" OnClick="btnTeamAvg_Click" />
+     <asp:Label ID="Label1" runat="server" ForeColor="Green" Font-Bold="true" />
+     <h3>TryIt: Get Next 5 Games or Remaining Schedule</h3>
+     <asp:Button ID="btnNext" runat="server" Text="Get Next Games" OnClick="btnNext_Click" />
+     <asp:Label ID="lblNext" runat="server" />
+    <hr />
+
+    <h2>Local Component 1: Favorite Team Cookie</h2>
+    <p>Enter Your Favorite Team: </p>
+    <asp:TextBox ID="txtFavTeam" runat="server" />
+    <asp:Button ID="btnSaveFavTeam" runat="server" Text="Save Favorite" OnClick="btnSaveFavTeam_Click" />
+    <asp:Label ID="lblFavTeam" runat="server" ForeColor="Red" />
+    <hr />
+
+    <h2>Local Component 2: DLL Win Percentage Calculator</h2>
+    <p>Wins:</p>
+    <asp:TextBox ID="txtWins" runat="server" />
+    <p>Losses:</p>
+    <asp:TextBox ID="txtLosses" runat="server" />
+    <asp:Button ID="btnCalcWinPct" runat="server" Text="Calculate Win %" OnClick="btnCalcWinPct_Click" />
+    <asp:Label ID="lblWinPct" runat="server" ForeColor="Wheat" />
+
     <h2>Service Directory Table</h2>
     <table border="1" style="border-collapse: collapse; text-align: left;">
       <tr>
@@ -124,7 +152,47 @@
         <td>string</td>
         <td>Returns SHA-256 hash of the input using DLL logic</td>
       </tr>
-
+      <tr>
+        <td>Chris Schroeder</td>
+        <td>Web Service</td>
+        <td>GetTeamRecord()</td>
+        <td>string team</td>
+        <td>string</td>
+        <td>Returns the Wins and Losses for a team in a string</td>
+      </tr>
+      <tr>
+        <td>Chris Schroeder</td>
+        <td>Web Service</td>
+        <td>GetTeamAverage Points()</td>
+        <td>string team</td>
+        <td>double</td>
+        <td>Returns the average points of all games played by a team</td>
+      </tr>
+      <tr>
+        <td>Chris Schroeder</td>
+        <td>Web Service</td>
+        <td>GetNextGames()</td>
+        <td>string team</td>
+        <td>string</td>
+        <td>Returns the next 5 games or remaining schedule</td>
+      </tr>
+      <tr>
+        <td>Chris Schroeder</td>
+        <td>Local Component</td>
+        <td>FavoriteTeam()</td>
+        <td>string team</td>
+        <td>string</td>
+        <td>Returns Cookie of Favorite Team for future sessions</td>
+      </tr>
+      <tr>
+        <td>Chris Schroeder</td>
+        <td>Local Component</td>
+        <td>WinPercentCalc()</td>
+        <td>int wins, int losses</td>
+        <td>double percent</td>
+        <td>Returns the team record percentage using DLL logic</td>
+      </tr>
+     </table>
 
 
 </asp:Content>

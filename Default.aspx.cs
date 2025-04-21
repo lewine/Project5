@@ -1,4 +1,6 @@
 ﻿using Assignment5_CSE445_Group_62.Services;
+using Assignment5_CSE445_Group_62;
+using HoopHupTeamService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +19,12 @@ namespace Assignment5_CSE445_Group_62
                 // Simulated login
                 Session["username"] = "jason";
                 Session["role"] = "member";
+
+                //This is for the fav team cookie
+                if (Request.Cookies["FavoriteTeam"] != null)
+                {
+                    lblFavTeam.Text = $"Howdy! Favorite Team: {Request.Cookies["FavoriteTeam"].Value}";
+                }
             }
 
             lblSession.Text = "Logged in as: " + Session["username"] + " (Role: " + Session["role"] + ")";
@@ -72,6 +80,57 @@ namespace Assignment5_CSE445_Group_62
             string input = txtInputToHash.Text;
             string hash = CryptoUtils.HashString(input);
             lblHashResult.Text = "Hashed Value: " + hash;
+        }
+
+        //These are the dang buttons for TeamService
+        protected void btnRecord_Click(object sender, EventArgs e)
+        {
+            var svc = new TeamService();
+            lblRecord.Text = svc.GetTeamRecord(txtTeam.Text);
+        }
+
+        protected void btnTeamAvg_Click(object sender, EventArgs e)
+        {
+            var svc = new TeamService();
+            double avg = svc.GetTeamAveragePoints(txtTeam.Text);
+            lblAvg.Text = $"Avg: {avg} PPG";
+        }
+        protected void btnNext_Click(object sender, EventArgs e)
+        {
+            var svc = new TeamService();
+            lblNext.Text = svc.GetNextGame(txtTeam.Text);
+        }
+
+        protected void btnSaveFavTeam_Click(object sender, EventArgs e)
+        {
+            string team = txtFavTeam.Text.Trim();
+
+            if (!string.IsNullOrEmpty(team))
+            {
+                HttpCookie favCookie = new HttpCookie("FavoriteTeam", team);
+                //make it last a week tops
+                favCookie.Expires = DateTime.Now.AddDays(7);
+                Response.Cookies.Add(favCookie);
+
+                lblFavTeam.Text = $"Saved! Your favorite team is: {team}";
+            }
+            else
+            {
+                lblFavTeam.Text = "Please enter a team name.";
+            }
+        }
+
+        protected void btnCalcWinPct_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtWins.Text, out int wins) && int.TryParse(txtLosses.Text, out int losses))
+            {
+                double pct = TeamUtils.CalculateWinPercentage(wins, losses);
+                lblWinPct.Text = $"Win Percentage: {pct:F2}%";
+            }
+            else
+            {
+                lblWinPct.Text = "Invalid input. Please enter valid numbers.";
+            }
         }
 
 
