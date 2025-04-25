@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Matchups>
+	<Matchup>
+		<Team1>ClutchCrew</Team1>
+		<Team2>The Guys</Team2>
+		<Date>September 11</Date>
+		<Played>False</Played>
+	</Matchup>
+	<Matchup>
+		<Team1>ClutchCrew</Team1>
+		<Team2>Basket Guys</Team2>
+		<Date>October 2</Date>
+		<Played>False</Played>
+	</Matchup>
+	<Matchup>
+		<Team1>ClutchCrew</Team1>
+		<Team2>Couple of People</Team2>
+		<Date>October 2</Date>
+		<Played>False</Played>
+	</Matchup>
+</Matchups>

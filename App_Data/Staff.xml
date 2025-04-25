@@ -1,0 +1,4 @@
+﻿<Staff>
+	<User username="teststaff" password="Cse445!" role="staff" />
+	<User username="Lewin" password="Elep" role="member" />
+</Staff>
