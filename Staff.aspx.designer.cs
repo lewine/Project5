@@ -60,6 +60,15 @@ namespace Assignment5_CSE445_Group_62
         protected global::System.Web.UI.WebControls.Button btnLogin;
 
         /// <summary>
+        /// btnRegister control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRegister;
+
+        /// <summary>
         /// pnlAdmin control.
         /// </summary>
         /// <remarks>

@@ -9,6 +9,8 @@
 
     <h1>HoopHub - TryIt Page</h1>
 
+    <h1>FOR ASSIGNMENT 6, SCROLL DOWN TO THE MEMBER AND STAFF LOGIN PAGE LINKS TO BE REDIRECTED TO THE PAGE TO SIMULATE THE APPLICATION</h1>
+
     <hr />
     <h2>Player Apps (Cyler Minkus)</h2>
 
@@ -112,6 +114,10 @@
 
     <h2>Staff Portal</h2>
     <a href="Staff.aspx">Staff Portal</a>
+
+    <h2>Member Portal</h2>
+    <a href="Member.aspx">Member Portal</a>
+    
 
 
 

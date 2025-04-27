@@ -16,12 +16,12 @@
             Password:
             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" /><br /><br />
             <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
+            <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
 
             <hr />
             <asp:Panel ID="pnlAdmin" runat="server" Visible="false">
                 <h3>Admin Section</h3>
                 <asp:Label ID="lblAdminWelcome" runat="server" />
-                <!-- Add any "admin-only" content here -->
             </asp:Panel>
 
         </div>

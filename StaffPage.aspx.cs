@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Assignment5_CSE445_Group_62.Services;
+using HoopHupTeamService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -79,6 +81,27 @@ namespace Assignment5_CSE445_Group_62
 
             lblAddGameStatus.Text = "Game successfully added!";
         }
+
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("Default.aspx");
+        }
+
+        protected void btnTeamRecord_Click(object sender, EventArgs e)
+        {
+            TeamService svc = new TeamService();
+            string record = svc.GetTeamRecord(txtTeamName.Text);
+            lblTeamRecord.Text = "Record: " + record;
+        }
+
+        protected void btnLeagueStandings_Click(object sender, EventArgs e)
+        {
+            LeagueService svc = new LeagueService();
+            lblLeagueStandings.Text = svc.GetLeagueStandings();
+        }
+
 
 
     }
